@@ -25,4 +25,25 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toEqual(19);
     });
   });
+
+  describe('#minTemperature', function() {
+    it('sets minimum temperature to 10', function() {
+      expect(thermostat.minTemperature).toEqual(10);
+    });
+
+    it('stops you going below minimum temperature', function() {
+      expect(function(){thermostat.down(11)}).toThrow('BBBRRRRR TOO COLD');
+    });
+  });
+
+  describe('power saving', function() {
+    it('starts with power saving mode being on', function() {
+      expect(thermostat.powerSavingMode).toEqual(true);
+    });
+
+    it('switches off power saving mode when toggled', function() {
+      thermostat.powerSavingToggle()
+      expect(thermostat.powerSavingMode).toEqual(false);
+    });
+  });
 });
