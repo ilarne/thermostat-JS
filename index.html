@@ -31,7 +31,32 @@
       <br>
       <br>
   <h1><span id="energy-usage"></span><br></h1>
-  <h1>Current weather in London: <span id="local-weather"></span><br></h1>
+  <h1>Current weather in <span id='city'>Nothiin</span>: <span id="local-weather"></span><br></h1>
+
+  <div class="container">
+    <div id="apiDiv">
+        <h4>Select the City for Weather Report</h4>
+        <span><input type="radio" id="cityRadio"
+
+        name="cityRadio" value="2152658" name="Melbourne">Melbourne</span>
+        <span><input type="radio" id="cityRadio"
+
+        name="cityRadio" value="2193734" name="Auckland">Auckland</span>
+        <span><input type="radio" id="cityRadio"
+
+        name="cityRadio" value="1261481" name="New Delhi">New Delhi</span>
+        <span><input type="radio" id="cityRadio"
+
+        name="cityRadio" value="292968" name="Abu Dhabi">Abu Dhabi</span>
+        <span><input type="radio" id="cityRadio"
+
+        name="cityRadio" value="1172451" name="Lahore">Lahore</span>
+        <button id="submit">Check Weather</button>
+        <div class="textAlignCenter">
+        </div>
+        <div id="message"></div>
+    </div>
+  </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="src/Thermostat.js"></script>

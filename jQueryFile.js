@@ -3,9 +3,22 @@ $( document ).ready(function() {
   var thermostat = new Thermostat();
 
 $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=2643744&APPID=3e4fad0848e570049c0e27f4eb9cbe78", function temp(localtemperature) {
-  var temp = (localtemperature.main.temp - 273.15)
+  var temp = Math.floor(localtemperature.main.temp - 273.15);
+
+  console.log(localtemperature);
+
   $("#local-weather").text(temp + "°C");
+  $("#city").text(localtemperature.name);
 });
+
+  $("#submit").click(function() {
+    $.post("http://api.openweathermap.org/data/2.5/weather?id=" +
+    $("input[id='cityRadio']:checked").val() + "&APPID=3e4fad0848e570049c0e27f4eb9cbe78", function (local) {
+      var temp = Math.floor(local.main.temp - 273.15);
+      $("#local-weather").text(temp + "°C");
+      $("#city").text(local.name);
+    });
+  });
 
   $("#up").click(function() {
     thermostat.up();
