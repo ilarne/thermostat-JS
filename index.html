@@ -5,9 +5,9 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body>
+<body id="medium" class="body">
 <div align="center">
-  <h1>Current temperature:</h1>
+  <h1>Current room temperature:</h1>
 </div>
 <div class="centre-container" align="center">
   <span id="temperature-display"></span><br>
@@ -28,6 +28,10 @@
       <button id="reset" class="button">
         Reset Temperature
       </button>
+      <br>
+      <br>
+  <h1><span id="energy-usage"></span><br></h1>
+  <h1>Current weather in London: <span id="local-weather"></span><br></h1>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="src/Thermostat.js"></script>
