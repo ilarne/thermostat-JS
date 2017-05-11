@@ -2,28 +2,39 @@ function Thermostat() {
   this.temperature = 20;
   this.minTemperature = 10;
   this.powerSavingMode = true;
+  this.maxTemperature = 25;
 };
 
-Thermostat.prototype.up = function(n = 1) {
-    this.temperature += n
+Thermostat.prototype.up = function() {
+  if (this.temperature >= this.maxTemperature) {
+    throw('OW TOO HOT');
+  }
+   else {
+    this.temperature++
+  }
 }
 
 Thermostat.prototype.down = function(n = 1) {
-  this.temperatureController(n)
-  this.temperature -= n;
+  if (this.temperature - n < this.minTemperature) {
+    throw('BBBRRRRR TOO COLD')
+  }
+  else {
+    this.temperature -= n
+  }
 }
 
-Thermostat.prototype.temperatureController = function(n) {
-  if (this.temperature - n < this.minTemperature) throw('BBBRRRRR TOO COLD');
+Thermostat.prototype.temperatureDisplay = function() {
+    return this.temperature;
 }
 
 Thermostat.prototype.powerSavingToggle = function() {
-  this.powerSavingMode = !this.powerSavingMode
-}
-
-Thermostat.prototype.maxTemperature = function() {
-  if (this.powerSavingMode === true) { return 25 }
-    return 32
+  this.powerSavingMode = !this.powerSavingMode;
+  if (this.powerSavingMode === false) {
+      this.maxTemperature = 32
+  }
+  else {
+      this.maxTemperature = 25
+  }
 }
 
 Thermostat.prototype.reset = function() {

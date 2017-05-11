@@ -4,6 +4,7 @@ describe('Thermostat', function() {
 
   afterEach(function() {
     thermostat.temperature = 20;
+    this.powerSavingMode = true;
   })
 
   describe('#temperature', function() {
@@ -16,6 +17,10 @@ describe('Thermostat', function() {
     it('increases the temperature', function() {
       thermostat.up(5)
       expect(thermostat.temperature).toEqual(25);
+    });
+
+    it('stops you going above max temperature', function() {
+      expect(function(){thermostat.up(20)}).toThrow('OW TOO HOT');
     });
   });
 
@@ -32,7 +37,7 @@ describe('Thermostat', function() {
     });
 
     it('stops you going below minimum temperature', function() {
-      expect(function(){thermostat.down(11)}).toThrow('BBBRRRRR TOO COLD');
+      expect(function(){thermostat.down(100)}).toThrow('BBBRRRRR TOO COLD');
     });
   });
 
@@ -40,23 +45,18 @@ describe('Thermostat', function() {
     it('starts with power saving mode being on', function() {
       expect(thermostat.powerSavingMode).toEqual(true);
     });
-
-    it('switches off power saving mode when toggled', function() {
-      thermostat.powerSavingToggle()
-      expect(thermostat.powerSavingMode).toEqual(false);
-    });
   });
 
   describe('#maxTemperature', function() {
     it('is 25 degrees when powersaver mode is on', function() {
-      thermostat.powerSavingMode = true
-      expect(thermostat.maxTemperature()).toEqual(25)
+      this.powerSavingMode = true
+      expect(thermostat.maxTemperature).toEqual(25)
     });
 
-    it('is 32 degrees when powersaver mode is on', function() {
-      thermostat.powerSavingToggle()
-      console.log(thermostat.powerSavingMode)
-      expect(thermostat.maxTemperature()).toEqual(32)
+    it('is 32 degrees when powersaver mode is off', function() {
+        this.powerSavingMode = true
+        thermostat.powerSavingToggle()
+      expect(thermostat.maxTemperature).toEqual(32)
     });
   });
 
