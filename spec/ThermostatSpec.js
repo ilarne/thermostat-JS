@@ -15,12 +15,12 @@ describe('Thermostat', function() {
 
   describe('#up', function() {
     it('increases the temperature', function() {
-      thermostat.up(5)
-      expect(thermostat.temperature).toEqual(25);
+      thermostat.up(4)
+      expect(thermostat.temperature).toEqual(24);
     });
 
     it('stops you going above max temperature', function() {
-      expect(function(){thermostat.up(20)}).toThrow('OW TOO HOT');
+      expect(function(){thermostat.up(5)}).toThrow('OW TOO HOT');
     });
   });
 
@@ -69,15 +69,15 @@ describe('Thermostat', function() {
   describe('#energyUsage', function() {
     it("returns 'low-usage' when temperature is below 18", function() {
       thermostat.temperature = 16
-      expect(thermostat.energyUsage()).toEqual('low-usage')
+      expect(thermostat.energyUsage()).toEqual('low')
     });
     it("returns 'medium-usage' when temperature is below 25 and above 17", function() {
       thermostat.temperature = 20
-      expect(thermostat.energyUsage()).toEqual('medium-usage')
+      expect(thermostat.energyUsage()).toEqual('medium')
     });
     it("returns 'high-usage' when temperature is above 24", function() {
       thermostat.temperature = 28
-      expect(thermostat.energyUsage()).toEqual('high-usage')
+      expect(thermostat.energyUsage()).toEqual('high')
     });
   });
 });

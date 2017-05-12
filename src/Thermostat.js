@@ -5,12 +5,12 @@ function Thermostat() {
   this.maxTemperature = 25;
 };
 
-Thermostat.prototype.up = function() {
-  if (this.temperature >= this.maxTemperature) {
-    throw('OW TOO HOT');
+Thermostat.prototype.up = function(n = 1) {
+  if (this.temperature + n >= this.maxTemperature) {
+    throw('OW TOO HOT')
   }
    else {
-    this.temperature++
+    this.temperature += n
   }
 }
 
@@ -34,6 +34,7 @@ Thermostat.prototype.powerSavingToggle = function() {
   }
   else {
       this.maxTemperature = 25
+      this.temperature = 25
   }
 }
 
