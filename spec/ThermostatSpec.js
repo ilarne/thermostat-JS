@@ -20,7 +20,7 @@ describe('Thermostat', function() {
     });
 
     it('stops you going above max temperature', function() {
-      expect(function(){thermostat.up(5)}).toThrow('OW TOO HOT');
+      expect(function(){thermostat.up(6)}).toThrow('OW TOO HOT');
     });
   });
 
