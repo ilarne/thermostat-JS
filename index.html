@@ -8,35 +8,42 @@
 <body>
   <div id="left-side">
     <div id="left-container">
-  <h2 class="centred" id="roomtemptext">Current room temperature:</h2>
-<p class="centred">  <span id="temperature-display"></span></p><br>
+      <br>
+  <h2 class="centred" id="roomtemptext"  style="color:white">Current room temperature:</h2>
+<p class="centred">  <span id="temperature-display"  style="color:white"></span></p><br>
     <button class="centred-2" id='up' class="button">
       Up!
       </button>
+
       <button class="centred-2" id='down' class="button">
         Down!
       </button>
       <br>
     <br>
+    <div id="slider">
   <label class="switch">
   <input id="powersavemode" type="checkbox" class="checked">
 <div class="slider round"></div>
 </label>
+</div>
   <br>
       <button id="reset" class="button">
         Reset Temperature
       </button>
       <br>
     <br>
-<h1><span id="energy-usage"></span><br></h1>
+<!-- <h1><span id="energy-usage" style="color:white"></span><br></h1> -->
 </div>
 </div>
 <div id="right-side">
-  <h1>Current weather in <span id='city'>Nothiin</span>: <span id="local-weather"></span><br></h1>
+  <div id="right-container">
+    <br>
+  <h2 class="centred" style="color:white">Current weather in <br><span id='city'>Nothiin</span>: <br><span id="local-weather"></span><br></h2>
     <div class="container">
       <input type="text" class="givencity">
-        <button class="find-weather">Find local weather</button>
+        <button class="find-weather" id="local-weather-button">Find local weather</button>
     </div>
+  </div>
   </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="src/Thermostat.js"></script>
