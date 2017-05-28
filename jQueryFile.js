@@ -2,13 +2,13 @@ $( document ).ready(function() {
 
   var thermostat = new Thermostat();
 
-$.getJSON("http://api.openweathermap.org/data/2.5/weather?id=2643744&APPID=3e4fad0848e570049c0e27f4eb9cbe78", function temp(localtemperature) {
-  var temp = Math.floor(localtemperature.main.temp - 273.15);
-  console.log(localtemperature)
-  $("#local-weather").text(temp + "°C");
-  $("#city").text(localtemperature.name);
+  $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=2643744&APPID=3e4fad0848e570049c0e27f4eb9cbe78", function temp(localtemperature) {
+    var temp = Math.floor(localtemperature.main.temp - 273.15);
+    console.log(localtemperature)
+    $("#local-weather").text(temp + "°C");
+    $("#city").text(localtemperature.name);
 
-});
+  });
 
   $(".find-weather").click(function() {
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" +

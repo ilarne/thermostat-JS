@@ -54,8 +54,8 @@ describe('Thermostat', function() {
     });
 
     it('is 32 degrees when powersaver mode is off', function() {
-        this.powerSavingMode = true
-        thermostat.powerSavingToggle()
+      this.powerSavingMode = true
+      thermostat.powerSavingToggle()
       expect(thermostat.maxTemperature).toEqual(32)
     });
   });

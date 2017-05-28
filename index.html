@@ -6,48 +6,42 @@
 </head>
 <!-- <body id="medium" class="body"> -->
 <body>
-  <div id="left-side">
-    <div id="left-container">
-      <br>
-  <h2 class="centred" id="roomtemptext"  style="color:white">Current room temperature:</h2>
-<p class="centred">  <span id="temperature-display"  style="color:white"></span></p><br>
-    <button class="centred-2" id='up' class="button">
-      Up!
-      </button>
-
-      <button class="centred-2" id='down' class="button">
-        Down!
-      </button>
+<div id="left-side">
+  <div id="left-container">
+    <br>
+      <h2 class="centred" id="roomtemptext"  style="color:white">Current room temperature:</h2>
+          <p class="centred">  <span id="temperature-display"  style="color:white"></span></p><br>
+          <button class="centred-2" id='up' class="button">Up!</button>
+        <button class="centred-2" id='down' class="button">Down!</button>
       <br>
     <br>
-    <div id="slider">
-  <label class="switch">
-  <input id="powersavemode" type="checkbox" class="checked">
-<div class="slider round"></div>
-</label>
-</div>
-<span id="power-save" style="color:white">Power Save Mode</span>
-  <br><br>
-      <button id="reset" class="button">
-        Reset Temperature
-      </button>
+  <div id="slider">
+    <label class="switch">
+      <input id="powersavemode" type="checkbox" class="checked">
+        <div class="slider round"></div>
+    </label>
+  </div>
+      <span id="power-save" style="color:white">Power Save Mode</span>
+        <br>
+          <br>
+            <button id="reset" class="button">Reset Temperature?</button>
+          <br>
       <br>
-    <br>
-<!-- <h1><span id="energy-usage" style="color:white"></span><br></h1> -->
+      <!-- <h1><span id="energy-usage" style="color:white"></span><br></h1> -->
+  </div>
 </div>
-</div>
-<div id="right-side">
-  <div id="right-container">
-    <br>
-  <h2 class="centred" style="color:white">Current weather in <br><span id='city'>Nothiin</span>: <br><span id="local-weather"></span><br></h2>
-    <div class="container">
-      <input type="text" class="givencity">
-        <button class="find-weather" id="local-weather-button">Find local weather</button>
+  <div id="right-side">
+    <div id="right-container">
+      <br>
+        <h2 class="centred" style="color:white">Current weather in <br><span id='city'>Nothiin</span>: <br><span id="local-weather"></span><br></h2>
+          <div class="container">
+            <input type="text" class="givencity">
+      <button class="find-weather" id="local-weather-button">Find local weather</button>
     </div>
   </div>
-  </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="src/Thermostat.js"></script>
-<script src="jQueryFile.js"></script>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="src/Thermostat.js"></script>
+  <script src="jQueryFile.js"></script>
 </body>
 </html>

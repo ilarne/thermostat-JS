@@ -1,6 +1,6 @@
 body {
   margin: 0;
-     background-image: url("cloudy_d-e618500.jpg");
+  background-image: url("cloudy_d-e618500.jpg");
 }
 
 #roomtemptext {
@@ -9,22 +9,22 @@ body {
 
 #temperature-display {
   font-size: 100px;
-    font-style: oblique;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-style: oblique;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #power-save {
   font-size: 15px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    float: left;
-    margin-left: 90px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  float: left;
+  margin-left: 90px;
 }
 
 #local-weather {
   font-size: 90px;
-    font-style: oblique;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    margin-left: 40px;
+  font-style: oblique;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-left: 40px;
 }
 
 #up {
