@@ -32,18 +32,18 @@ body {
   margin-left: 40px;
 }
 
-#up:active {background-color: #3e8e41;}
+#up:active {background-color: #3e9ff4;}
 
-#up:hover {background-color: #3e8e41}
+#up:hover {background-color: #3e9ff4}
 
 #down {
   float: right;
   margin-right: 40px;
 }
 
-#down:active {background-color: #3e8e41;}
+#down:active {background-color: #3e9ff4;}
 
-#down:hover {background-color: #3e8e41}
+#down:hover {background-color: #3e9ff4}
 
 #slider {
   display: block;
@@ -64,9 +64,9 @@ body {
   bottom:   30px;
 }
 
-#local-weather-button:active {background-color: #3e8e41;}
+#local-weather-button:active {background-color: #3e9ff4}
 
-#local-weather-button:hover {background-color: #3e8e41}
+#local-weather-button:hover {background-color: #3e9ff4}
 
 #left-side {
   float: left;
@@ -148,10 +148,10 @@ button {
   box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {background-color: #3e9ff4}
 
 .button:active {
-  background-color: #3e8e41;
+  background-color: #3e9ff4;
 }
 
 .centre-container {
