@@ -3,9 +3,10 @@ $( document ).ready(function() {
   var thermostat = new Thermostat();
 
   $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=2643744&APPID=3e4fad0848e570049c0e27f4eb9cbe78", function temp(localtemperature) {
-    var temp = Math.floor(localtemperature.main.temp - 273.15);
-    console.log(localtemperature)
-    $("#local-weather").text(temp + "°C");
+    var tempHigh = Math.floor(localtemperature.main.temp_max - 273.15);
+    var tempLow = Math.floor(localtemperature.main.temp_min - 273.15);
+    $("#local-weather-high").text(tempHigh + "°C");
+    $("#local-weather-low").text(tempLow + "°C");
     $("#city").text(localtemperature.name);
 
   });
@@ -13,8 +14,10 @@ $( document ).ready(function() {
   $(".find-weather").click(function() {
     $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" +
     $(".givencity").val() + "&APPID=3e4fad0848e570049c0e27f4eb9cbe78", function (local) {
-      var temp = Math.floor(local.main.temp - 273.15);
-      $("#local-weather").text(temp + "°C");
+      var tempHigh = Math.floor(local.main.temp_max - 273.15);
+      var tempLow = Math.floor(local.main.temp_min - 273.15);
+      $("#local-weather-high").text(tempHigh + "°C");
+      $("#local-weather-low").text(tempLow + "°C");
       $("#city").text(local.name);
     });
   });

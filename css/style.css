@@ -20,8 +20,33 @@ body {
   margin-left: 90px;
 }
 
-#local-weather {
-  font-size: 90px;
+#local-weather-low {
+  text-align: center;
+  font-size: 70px;
+  font-style: oblique;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-left: 40px;
+}
+
+#local-weather-high {
+  text-align: center;
+  font-size: 70px;
+  font-style: oblique;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-left: 40px;
+}
+
+#temp-high-text {
+  text-align: center;
+  font-size: 15px;
+  font-style: oblique;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin-left: 40px;
+}
+
+#temp-low-text {
+  text-align: center;
+  font-size: 15px;
   font-style: oblique;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   margin-left: 40px;
@@ -88,17 +113,6 @@ body {
   margin: 0;
 }
 
-.givencity {
-  display: block;
-  margin: 0 auto;
-  width: 50%;
-  font-size: 25px;
-  box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  bottom: 130px;
-  right:   80px;
-  position: absolute;
-}
-
 #left-container {
   background: rgba(225, 225, 225, .5);
   border-radius: 25px;
@@ -118,6 +132,17 @@ body {
   margin-top: 100px;
   height: 460px;
   position: relative;
+}
+
+.givencity {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  font-size: 25px;
+  box-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  bottom: 130px;
+  right:   80px;
+  position: absolute;
 }
 
 .centred {
