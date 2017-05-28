@@ -32,10 +32,18 @@ body {
   margin-left: 40px;
 }
 
+#up:active {background-color: #3e8e41;}
+
+#up:hover {background-color: #3e8e41}
+
 #down {
   float: right;
   margin-right: 40px;
 }
+
+#down:active {background-color: #3e8e41;}
+
+#down:hover {background-color: #3e8e41}
 
 #slider {
   display: block;
@@ -55,6 +63,10 @@ body {
   right:    50px;
   bottom:   30px;
 }
+
+#local-weather-button:active {background-color: #3e8e41;}
+
+#local-weather-button:hover {background-color: #3e8e41}
 
 #left-side {
   float: left;
@@ -140,8 +152,6 @@ button {
 
 .button:active {
   background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
 }
 
 .centre-container {
