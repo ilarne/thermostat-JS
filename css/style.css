@@ -13,6 +13,13 @@ body {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+#power-save {
+  font-size: 15px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    float: left;
+    margin-left: 90px;
+}
+
 #local-weather {
   font-size: 90px;
     font-style: oblique;
@@ -87,7 +94,7 @@ body {
   margin: 0 auto;
   width: 300px;
   margin-top: 100px;
-  height: 440px;
+  height: 460px;
 }
 
 #right-container {
@@ -97,7 +104,7 @@ body {
   margin: 0 auto;
   width: 300px;
   margin-top: 100px;
-  height: 440px;
+  height: 460px;
   position: relative;
 }
 
