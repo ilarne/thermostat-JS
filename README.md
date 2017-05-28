@@ -1,6 +1,6 @@
 # Online Thermostat
 
-This project demonstrates my first attempt at creating a web app with Javascript. Starting with TDD-ing the business logic in Javascript, my pair and I then hooked this up to a dynamic visual interface using JQuery. An API provided by [Open Weather Map](https://openweathermap.org/) is used to fetch data from an external source and display that data on the page. 
+This project demonstrates my first attempt at creating a web app with Javascript. Starting with TDD-ing the business logic in Javascript, my pair and I then hooked this up to a dynamic visual interface using JQuery. An API provided by [Open Weather Map](https://openweathermap.org/) was used to fetch data from an external source and display that data on the page. 
 
 Features
 -------
