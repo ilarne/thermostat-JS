@@ -12,7 +12,7 @@ How to use
 
 How to run tests
 ---------------
-- While in local directory, enter `$open SpecRunner.html` into the Terminal
+- While in local directory, enter `$ open SpecRunner.html` into the Terminal
 
 Features
 -------
