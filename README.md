@@ -5,7 +5,7 @@ This project demonstrates my first attempt at creating a web app with Javascript
 How to use
 ---------
 - Clone this repository to your local directory
-- Navigate to directory `$ cd [name-of-local-repo]`
+- Navigate to directory: `$ cd [name-of-local-repo]`
 - Open text editor
 - Copy the full project path of `index.html`
 - Paste and navigate to in your browser
